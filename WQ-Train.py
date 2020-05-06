@@ -20,8 +20,8 @@ parsedTData = rows.map(parsePoint)
 
 #Training data using Random Forest
 model = RandomForest.trainClassifier(parsedTData, numClasses=11, categoricalFeaturesInfo={},
-                                     numTrees=3, featureSubsetStrategy="auto",
-                                     impurity='gini', maxDepth=4, maxBins=32)
+                                     numTrees=76, featureSubsetStrategy="auto",
+                                     impurity='gini', maxDepth=18, maxBins=32)
 
 vData = sc.textFile("s3://wq-sp2685/ValidationDataset.csv")
 header = vData.first()
