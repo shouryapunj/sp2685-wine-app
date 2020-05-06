@@ -34,7 +34,7 @@ labelsAndPredictions = parsedVData.map(lambda lp: lp.label).zip(predictions)
 
 #Calculating F1 Score on validation data
 metrics = MulticlassMetrics(labelsAndPredictions)
-f1Score = metrics.fMeasure()
+f1Score = metrics.weightedFMeasure()
 
 print ("F1 Score on validation data = ", f1Score)
 

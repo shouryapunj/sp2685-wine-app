@@ -32,7 +32,7 @@ labelsAndPredictions = parsedTestData.map(lambda lp: lp.label).zip(predictions)
 
 #Calculating F1 Score
 metrics = MulticlassMetrics(labelsAndPredictions)
-f1Score = metrics.fMeasure()
+f1Score = metrics.weightedFMeasure()
 
 #F1 Score
 print ("F1 score on Test data = ", f1Score)
